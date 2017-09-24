@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bank_transfer_confirmation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cashmos.cashmos.BankTransferConfirmationActivity"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/transfer_header"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CONFIRMATION"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Transfer Amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textSize="18sp"
+                android:layout_weight=".4"
+                android:layout_gravity="end"
+                android:textColor="@color/success"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_weight=".6"
+                android:textAlignment="textEnd"
+                android:id="@+id/txtTransferAmount"
+                android:textColor="@color/success"/>
+
+        </LinearLayout>
+
+        <!-- Bank container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/title"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAccountsTitle"
+                android:textSize="17sp"
+                android:textColor="@color/link"
+                android:text="BANK ACCOUNT"
+                android:fontFamily="sans-serif-condensed"
+                android:drawableStart="@drawable/ic_account_balance_black_24dp"/>
+        </LinearLayout>
+
+        <!-- Bank -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:textSize="18sp"
+                android:layout_weight=".4"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Name"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_weight=".6"
+                android:textAlignment="textEnd"
+                android:id="@+id/txtBankName"/>
+
+        </LinearLayout>
+
+        <!-- Bank Branch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch"
+                android:textSize="18sp"
+                android:layout_weight=".4"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch Name"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_weight=".6"
+                android:textAlignment="textEnd"
+                android:id="@+id/txtBankBranch"/>
+
+        </LinearLayout>
+
+        <!-- Bank Account Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A/C Name"
+                android:textSize="18sp"
+                android:layout_weight=".4"
+                android:layout_gravity="left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Name"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_weight=".6"
+                android:textAlignment="textEnd"
+                android:id="@+id/txtBankAccountName"/>
+
+        </LinearLayout>
+
+        <!-- Bank Account Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A/C Number"
+                android:textSize="18sp"
+                android:layout_weight=".4"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_weight=".6"
+                android:textAlignment="textEnd"
+                android:id="@+id/txtBankAccountNumber"/>
+
+        </LinearLayout>
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Back"
+                android:id="@+id/btnBack"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight=".5"
+                android:text="Confirm"
+                android:id="@+id/btnConfirm"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

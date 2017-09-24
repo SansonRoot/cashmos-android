@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#ef6262</color>
+    <color name="colorPrimary">#ec4b4b</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="title">#e2e1e1</color>
+    <color name="link">#0073CF</color>
+
+    <color name="success">#669900</color>
+    <color name="danger">#FF4081</color>
+
+</resources>

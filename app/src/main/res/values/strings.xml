@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">CASHMOS</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+
+    <string name="currency">GH₵</string>
+    <string name="amount">%.02f</string>
+    <string name="money">GH₵%.2f</string>
+
+    <!-- Dashboard Activity -->
+    <string name="welcome">Welcome, %s</string>
+    <string name="title_accounts">ACCOUNTS</string>
+    <string name="title_recent_transactions">RECENT TRANSACTIONS</string>
+    <string name="title_transactions">TRANSACTIONS</string>
+
+    <!-- Account Activity -->
+    <string name="available">Available Balance</string>
+
+
+    <!-- Transfers -->
+    <string name="transfer_mobile_money">Mobile Money</string>
+    <string name="transfer_bank">Bank Account</string>
+    <string name="transfer_cashmos">Cashmos Account</string>
+    <string name="transfer_title">Where are you transferring to?</string>
+    <string name="transfer_description">Transferring from</string>
+    <string name="transfer_available_balance">(GH₵%.02f available)</string>
+    <string name="transfer_amount_max">Amount (GH₵%.02f max)</string>
+    <string name="transfer_action_done">DONE</string>
+    <string name="transfer_profile_id">Phone Number or @Business</string>
+
+    <string name="transfer_complete">Your transfer request is processing!</string>
+
+    <string-array name="mobile_networks">
+        <item>Choose Mobile Network…</item>
+        <item>MTN Mobile Money</item>
+        <item>Vodafone Cash</item>
+        <item>Togo Cash</item>
+        <item>Airtel Money</item>
+    </string-array>
+
+
+</resources>
