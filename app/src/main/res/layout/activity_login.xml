@@ -19,6 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp"
         android:id="@+id/edtUsername"
+        android:text="bright"
         android:hint="Username" />
 
     <EditText
@@ -30,6 +31,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="40dp"
         android:id="@+id/edtPassword"
+        android:text="password"
         android:hint="Password" />
 
     <Button

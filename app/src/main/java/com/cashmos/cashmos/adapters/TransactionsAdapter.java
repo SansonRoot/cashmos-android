@@ -76,17 +76,6 @@ public class TransactionsAdapter extends BaseAdapter {
 
     private void showDetails(int position){
 
-        // Open transaction details activity
-//        Intent intent = new Intent(context, SingleTransactionActivity.class);
-//        intent.putExtra(TransactionClient.MERCHANT_NAME, getItem(position).getMerchantName());
-//        intent.putExtra(TransactionClient.AMOUNT, getItem(position).getAmount());
-//        intent.putExtra(TransactionClient.FEE, getItem(position).getFee());
-//        intent.putExtra(TransactionClient.DATE, getItem(position).getDate());
-//        intent.putExtra(TransactionClient.DESCRIPTION, getItem(position).getDescription());
-//        intent.putExtra(TransactionClient.STATUS, getItem(position).getStatus());
-//        context.startActivity(intent);
-
-
         // Create an alert dialog and show it
         AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(context);
         View mDialogView = ((LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
