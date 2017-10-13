@@ -30,6 +30,7 @@
     <string name="available">Available Balance</string>
 
 
+    <!-- Transactions -->
     <!-- Transfers -->
     <string name="transfer_mobile_money">Mobile Money</string>
     <string name="transfer_bank">Bank Account</string>
@@ -51,5 +52,7 @@
         <item>Airtel Money</item>
     </string-array>
 
+
+    <string name="transaction_fee">Fee: GH₵%.2f</string>
 
 </resources>

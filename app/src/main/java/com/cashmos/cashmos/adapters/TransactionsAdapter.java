@@ -2,6 +2,7 @@ package com.cashmos.cashmos.adapters;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +65,79 @@ public class TransactionsAdapter extends BaseAdapter {
 
         setData(holder, position);
 
+        row.setOnClickListener(
+                new OnTransactionClicked(position)
+        );
+
         return row;
+    }
+
+
+
+    private void showDetails(int position){
+
+        // Open transaction details activity
+//        Intent intent = new Intent(context, SingleTransactionActivity.class);
+//        intent.putExtra(TransactionClient.MERCHANT_NAME, getItem(position).getMerchantName());
+//        intent.putExtra(TransactionClient.AMOUNT, getItem(position).getAmount());
+//        intent.putExtra(TransactionClient.FEE, getItem(position).getFee());
+//        intent.putExtra(TransactionClient.DATE, getItem(position).getDate());
+//        intent.putExtra(TransactionClient.DESCRIPTION, getItem(position).getDescription());
+//        intent.putExtra(TransactionClient.STATUS, getItem(position).getStatus());
+//        context.startActivity(intent);
+
+
+        // Create an alert dialog and show it
+        AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(context);
+        View mDialogView = ((LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
+                            .inflate(R.layout.single_transaction_dialog, null);
+
+        TextView mMerchantName = (TextView) mDialogView.findViewById(R.id.txtMerchantName);
+        TextView mTransactionAmount = (TextView) mDialogView.findViewById(R.id.txtTransactionAmount);
+        TextView mTransactionDate = (TextView) mDialogView.findViewById(R.id.txtDate);
+        TextView mDescription = (TextView) mDialogView.findViewById(R.id.txtDescription);
+        TextView mFee = (TextView) mDialogView.findViewById(R.id.txtFee);
+        TextView mStatus = (TextView) mDialogView.findViewById(R.id.txtStatus);
+
+        mMerchantName.setText(getItem(position).getMerchantName());
+        mTransactionAmount.setText(
+                context.getString(R.string.amount, getItem(position).getAmount())
+        );
+        mTransactionDate.setText(getItem(position).getDate());
+        mDescription.setText(getItem(position).getDescription());
+        mFee.setText(
+                context.getString(R.string.transaction_fee, getItem(position).getFee())
+        );
+        mStatus.setText(getItem(position).getStatus());
+
+        if(getItem(position).isComplete()){
+            setColor(mStatus, true);
+        }else{
+            setColor(mStatus, false);
+        }
+
+        mDialogBuilder.setView(mDialogView);
+
+        AlertDialog dialog = mDialogBuilder.create();
+        dialog.show();
+
+
+    }
+
+
+
+    private class OnTransactionClicked implements View.OnClickListener{
+
+        private int position;
+
+        OnTransactionClicked(int position){
+            this.position = position;
+        }
+
+        @Override
+        public void onClick(View v) {
+            TransactionsAdapter.this.showDetails(position);
+        }
     }
 
 
@@ -79,19 +152,30 @@ public class TransactionsAdapter extends BaseAdapter {
         holder.mTransaction.setImageResource(getTransactionIcon(position));
 
         if(getItem(position).isComplete()){
-            holder.status.setTextColor(ContextCompat.getColor(context, R.color.success));
+            setColor(holder.status, true);
         }else{
-            holder.status.setTextColor(ContextCompat.getColor(context, R.color.danger));
+            setColor(holder.status, false);
         }
 
         // We set the text color of the amount
         // based on whether it's a credit or debit transaction
         if(getItem(position).isCredit()){
-            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.success));
+            setColor(holder.amount, true);
         }else{
-            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.danger));
+            setColor(holder.amount, false);
         }
 
+    }
+
+
+
+    private void setColor(TextView view, boolean isSuccess){
+
+        int color = R.color.success;
+
+        if(!isSuccess)
+            color = R.color.danger;
+        view.setTextColor(ContextCompat.getColor(context, color));
     }
 
 

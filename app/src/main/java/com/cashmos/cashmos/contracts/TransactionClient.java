@@ -16,6 +16,14 @@ import retrofit2.http.Path;
 
 public interface TransactionClient {
 
+
+    public static final String MERCHANT_NAME = "merchant-name";
+    public static final String AMOUNT = "amount";
+    public static final String DESCRIPTION = "description";
+    public static final String FEE = "fee";
+    public static final String DATE = "date";
+    public static final String STATUS = "status";
+
     @GET("transactions/recent")
     Call<List<Transaction>> getRecentTransactions();
 
