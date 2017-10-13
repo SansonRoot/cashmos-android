@@ -24,6 +24,7 @@ public class TransactionsAdapter extends BaseAdapter {
 
     private List<Transaction> transactions;
     private Context context;
+    private AlertDialog.Builder mDialogBuilder;
 
 
     public TransactionsAdapter(List<Transaction> transactions, Context context){
@@ -73,11 +74,20 @@ public class TransactionsAdapter extends BaseAdapter {
     }
 
 
+    private AlertDialog.Builder getDialogBuilder(){
+
+        if(mDialogBuilder == null){
+            mDialogBuilder = new AlertDialog.Builder(context);
+        }
+
+        return mDialogBuilder;
+
+    }
+
 
     private void showDetails(int position){
 
         // Create an alert dialog and show it
-        AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(context);
         View mDialogView = ((LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                             .inflate(R.layout.single_transaction_dialog, null);
 
@@ -105,9 +115,11 @@ public class TransactionsAdapter extends BaseAdapter {
             setColor(mStatus, false);
         }
 
-        mDialogBuilder.setView(mDialogView);
+        AlertDialog.Builder builder = getDialogBuilder();
 
-        AlertDialog dialog = mDialogBuilder.create();
+        builder.setView(mDialogView);
+
+        AlertDialog dialog = builder.create();
         dialog.show();
 
 
