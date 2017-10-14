@@ -50,7 +50,7 @@ public class CashmosTransferConfirmation extends AppCompatActivity {
                 transferBundle.getDoubleExtra(Account.AVAILABLE_BALANCE, 0)
         ));
         mTransferAmount.setText(
-                getString(R.string.transfer_amount_max, transferBundle.getDoubleExtra("amount", 0))
+                getString(R.string.money, transferBundle.getDoubleExtra("amount", 0))
         );
 
         mRecipientName.setText(

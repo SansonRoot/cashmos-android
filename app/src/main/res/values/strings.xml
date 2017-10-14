@@ -55,4 +55,9 @@
 
     <string name="transaction_fee">Fee: GH₵%.2f</string>
 
+
+
+    <!--Profile-->
+    <string name="contact_label">CONTACT</string>
+
 </resources>

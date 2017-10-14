@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cashmos.cashmos.ProfileActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imgProfileImage"
+                app:civ_border_width="2dp"
+                android:layout_gravity="center"
+                app:civ_border_color="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:text="Firstname Lastname"
+                android:id="@+id/txtAccountName"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/title"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAccountsTitle"
+                android:text="@string/contact_label"
+                android:textSize="17sp"
+                android:textColor="@color/link"
+                android:fontFamily="sans-serif-condensed"
+                android:drawableStart="@drawable/ic_perm_contact_calendar_black_24dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".9"
+                android:drawableStart="@drawable/ic_phone_android_black_24dp"
+                android:text="+233 234 763810"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnChangePhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:paddingTop="2dp"
+                android:text="CHANGE"
+                android:textColor="@color/link" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.67"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:text="username@example.com"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnChangeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:paddingTop="2dp"
+                android:text="CHANGE"
+                android:textColor="@color/link" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/title"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS"
+                android:textSize="17sp"
+                android:textColor="@color/link"
+                android:fontFamily="sans-serif-condensed"
+                android:drawableStart="@drawable/ic_location_on_black_24dp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight=".9">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtStreet"
+                    android:textSize="15sp"
+                    android:text="101 Example Street" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCity"
+                    android:text="City Name"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPostalCode"
+                    android:textSize="15sp"
+                    android:text="00233"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight=".1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDIT"
+                    android:textColor="@color/link"
+                    android:id="@+id/btnChangeAddress"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

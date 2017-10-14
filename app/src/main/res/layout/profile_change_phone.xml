@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/phoneContainer">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:id="@+id/edtPhone"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Phone Number"
+            android:id="@+id/btnChangePhone"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/btnCancel"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/activationContainer"
+        android:visibility="invisible">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Activation Code"
+            android:inputType="numberSigned"
+            android:maxLines="1"
+            android:id="@+id/edtActivationCode"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activate"
+            android:id="@+id/btnActivate"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/btnCancelActivation"/>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        android:id="@+id/profileProgress"/>
+
+
+</LinearLayout>

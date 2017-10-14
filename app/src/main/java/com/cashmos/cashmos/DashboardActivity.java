@@ -1,7 +1,9 @@
 package com.cashmos.cashmos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -38,6 +40,9 @@ public class DashboardActivity extends AppCompatActivity {
         // We welcome the user
         welcomeUser();
 
+        // Register profile link
+        registerProfileLink();
+
         // We get references to views
         accountsProgressBar = (ProgressBar) findViewById(R.id.progress_bar_accounts);
         accountsProgressBar.setVisibility(ProgressBar.VISIBLE);
@@ -52,6 +57,22 @@ public class DashboardActivity extends AppCompatActivity {
 
         // We get recent transactions
         loadRecentTransactions();
+
+    }
+
+
+
+    private void registerProfileLink(){
+
+        View profileLink = findViewById(R.id.welcome_container);
+        profileLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open Profile Activity
+                Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
